@@ -1,0 +1,796 @@
+@charset "utf-8";
+/* CSS Document */
+/* 通用样式 */
+*{	
+	margin:0;
+	padding:0;
+	font-family:"メイリオ";
+ }
+html{
+	/*background: #F58C31;*/
+	color:white;
+}
+
+.clear{
+	clear:both;
+}
+/*左上方固定菜单*/
+#userMenu{
+	/*position:absolute;*/
+	width:130px;
+	position:fixed;
+	top:0;
+	left:2%;
+	text-align: center;
+    background: black;
+	/*display:none;*/
+    font-size:0.9em;
+}
+#userMenu li{
+	list-style-type:none;
+	margin:7px;
+	display:none;
+}
+
+a{
+	text-decoration: none;
+	color:white;
+}
+/*#userMenu li a:hover{
+	color:aqua;
+}*/
+a:hover{
+	color:#86fbe8;
+}
+
+/* 小圆点样式 */
+#fp-nav ul li{
+	
+}
+#fp-nav ul li a{
+
+}
+
+
+/* PC端末 */
+
+@media screen and (min-width:415px){
+	/* 手机端竖屏之外适用 */
+	.contact .fp-tableCell,.contact .fp-scrollable,.contact .fp-scroller{
+	    position:relative;
+		height:100%!important;
+	}
+}
+/*　top页面　背景图和front层都是通过background属性来实现的*/
+.top {
+	background:url(../img/TOP.png) no-repeat;
+	background-size:cover; 
+	position:relative;
+}
+
+.top .img{
+	width:1348px;
+	height:640px;
+	position:absolute;
+	/* 设置图片水平垂直居中 */
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	margin:auto;
+	background:url(../img/front.png) no-repeat;
+	background-size:contain;
+}
+
+/*　feature页面　*/
+.features{
+	background: url(../img/feature3.png) no-repeat;
+	background-size:cover; /*设置100%表示的是宽度100%*/
+	background-position: 0 0;
+}
+/* 每一个小盒子 */
+.feature{
+	position:relative;
+	width:100%;
+	height:820px; /* 注意：一定要设置高度 */
+}
+
+/* title */
+.feature .title{
+ 	position:absolute;
+	z-index:999;
+}
+.feature .t1{
+	left:23%;
+    top:4%;
+}
+.feature .t2{
+	top:7%;
+	right:20%;
+}
+.feature .t3{
+	left:25%;
+	top:70px;
+}
+
+/* picture */
+.feature .pic{
+	width:745px;
+	height:745px; 
+	position:absolute;
+	background-size:contain;
+}
+
+.feature .p1{
+	background:url(../img/storyBoard.png) no-repeat;
+	right:12%;
+}
+
+.feature .p2{
+	background:url(../img/develop7.png) no-repeat;
+	left:23%;
+}
+.feature .p3{
+	background:url(../img/wherever2.png) no-repeat;
+	right:15%;
+}
+
+/* 说明文 */
+.feature .article{
+	position:absolute;
+	z-index:999;
+	color:#8b54f8;
+	font-size:20px;
+	text-align: center; 
+	width:95%;/* 文字不至于紧贴屏幕边缘--主要对应于移动端 */
+	top:88%;
+	/* 设置说明文字的盒子水平居中 */
+	left:0;
+	right:0;
+	margin:0 auto;
+}
+
+/*　usage页面　*/
+.usage{
+	position:relative;
+	background: url(../img/usage2.png) no-repeat;
+	background-size:cover;
+}
+
+.usage .title{
+	position:absolute;
+	width:74px;
+	height:619px;
+	/* 垂直方向上居中 */
+	top:0;
+	bottom:0;
+	margin:auto 0;
+	/* 控制水平方向偏移 */
+	left:23%;
+
+}
+/* 根据父容器的大小自适应缩放 */
+.usage .title img{
+	width:100%;
+	height:auto;
+}
+.usage table{ 
+	position:absolute;
+	height:600px;
+	width:570px;
+	/* 实现垂直居中效果 */
+	top:0;
+	bottom:0;
+	margin:auto 0;
+	/* 控制水平方向上的偏移量 */
+	right:25%;
+	border-spacing:30px; /* 控制单元格之间的间距 */
+}
+
+.usage table tr img{
+	/* 控制每个step的小图标size */
+	height:70px;
+	width:70px;
+}
+/* contact页面 */
+
+
+.contact{
+	/*height:100%!important;*/
+}
+
+/* Left */
+/* 左边和右边各占页面的一半 */
+#company-info{
+	width:50%;
+	height:100%;
+	float:left;
+	position:relative;
+}
+#company-info h1{
+	text-align: center;
+	font-weight: normal;
+	/*margin-top:90px;*/
+	margin-top:15%;
+}
+#company-info #info-box{
+	/*padding:100px 185px;*/
+	width:240px;
+	position:absolute;
+	/* 实现水平居中效果 */
+	left:0;
+	right:0;
+	margin:0 auto;
+	/* 控制垂直方向上的偏移 */
+	top:30%;
+}
+
+/* 标题文字 */
+#company-info .title{
+	margin:10px 0;
+}
+/* title文字前的小标记-- 小方块 */
+.mark{
+	display:inline-block;
+	border-width:6px;
+	border-style:solid;
+	border-color:white;
+}
+
+/* Right */
+#contact-item{
+	width:50%;
+	height:100%;
+	float:right;
+	background:white;
+	position:relative;
+} 
+#contact-item h1{
+	color:#ff7561;
+	font-weight:normal;
+	margin-top:15%;
+	text-align:center;
+}
+#contact-item #items{
+	width:300px;
+	height:240px;
+	position:absolute;
+	/* 水平居中 */
+	left:0;
+	right:0;
+	margin:0 auto;
+	/* 垂直方向偏移 */
+	top:30%;
+}
+
+#contact-item .item{
+	width:300px;
+	height:50px;
+	text-align:center;
+	line-height:50px;
+	/*background:#fb6a5e;*/
+	background:#ff7561; 
+	margin-bottom:30px;
+}
+
+.contact .footer{
+	background:grey;
+	width:100%;
+	height:50px;
+	text-align:center;
+	position:absolute;  
+	bottom:0;
+}
+
+.contact .footer span{
+	line-height:50px;
+}
+.contact .fp-tableCell,.contact .fp-scrollable,.contact .fp-scroller{
+	position:relative;
+	/*height:100%!important;*/
+}
+
+
+/* 移动端样式设置 */
+/* 通用 */
+@media screen and (max-width:1367px){
+	/* 隐藏小圆点 */
+	#fp-nav,#userMenu{
+		display:none;
+	}
+	.top,.features{
+		background-size:cover;  /* 不进行设置的话，移动端会出现空白 */
+	}
+
+}
+
+/* IPadPro 横屏  -- 设备尺寸：width:1366*/
+/* ※ 注意:所有的尺寸要比实际设备的尺寸大上1px　*/
+@media screen and (min-width:1026px) and (max-width:1367px) and (orientation:landscape){
+	
+	/*Top 页面*/
+	.top .img
+	{
+		width:1300px;
+		height:611px;
+		position:absolute;
+	}
+
+	/* Feature 页面*/
+	.feature .t1{
+		left:15%;
+	}
+	.feature .t2{
+		right:18%;
+	}
+	.feature .t3{
+		left:17%;
+	}
+	
+	.feature .p1{
+		right:110px;
+		top:15px;
+	}
+	.feature .p2{
+		left:140px;
+	}
+	.feature .p3{
+		right:140px;
+	}
+	
+	/* usage页面 */
+	
+	.usage table{
+		right:15%;
+	}	
+
+	/* contact页面 */
+	.contact{
+		height:800px!important;
+	}
+}
+	
+/* IPadPro 竖屏 ---设备尺寸 width:1024px*/
+@media screen and (min-width:770px) and (max-width:1025px) and (orientation:portrait){
+	.top,.top .fp-tableCell,.contact,.contact .fp-tableCell {
+		height:640px!important;
+	}
+	/* top页面 */
+	
+	.top .img
+	{ /* 通过设置容器的宽高来实现图片缩放 */
+		width:980px;
+		height:461px;
+		position:absolute;
+	}
+	
+    /* Feature 页面*/
+	.feature .t1{
+		left:5%;
+	}
+	.feature .t2{
+		right:7%;
+	}
+	.feature .t3{
+		left:7%;
+	}
+	
+	.feature .p1{
+		right:7%;
+		top:12px;
+	}
+	.feature .p2{
+		left:7%;
+	}
+	.feature .p3{
+		right:7%;
+	}
+	
+	/* usage页面 */
+	.usage,.usage .fp-tableCell{
+		height:700px!important;
+	}
+	.usage table{
+		right:7%;
+	}
+}
+
+/* IPad 横屏 设备尺寸: width:1024px*/
+@media screen and (min-width:825px) and (max-width:1025px) and (orientation:landscape){
+	.top,.top .fp-tableCell,.contact,.contact .fp-tableCell {
+		height:640px!important;
+	}
+	.top .img
+	{
+		width:980px;
+		height:461px;
+		position:absolute;
+	}
+    /* Feature 页面*/
+	.feature .article{
+		font-size:1.2em;
+	}
+	.feature .t1{
+		left:5%;
+	}
+	.feature .t2{
+		right:7%;
+	}
+	.feature .t3{
+		left:7%;
+	}
+	
+	.feature .p1{
+		right:7%;
+		top:10px;
+	}
+	.feature .p2{
+		left:7%;
+	}
+	.feature .p3{
+		right:7%;
+	}
+	
+	.usage,.usage .fp-tableCell{
+		height:700px!important;
+	}
+	.usage table{
+		right:7%;
+	}
+}
+
+/* IPad 竖屏 --设备尺寸:width:768px*/
+@media screen and (min-width:416px) and (max-width:769px) and (orientation:portrait){
+	.top,.top .fp-tableCell{
+		height:500px!important;
+	}
+	/* top页面 */
+	.top .img
+	{
+		width:736px;
+		height:346px;
+		position:absolute;
+	}
+	/* feature页面 */
+	.feature{
+		height:600px!important;
+	}
+
+ /* ipad竖屏宽度较窄，因此需要对父容器（t1,t2,t3）设置宽高，让图片自动缩放 */
+/* title图片相关设置 */
+	.feature .title img{
+		height:100%;
+		width:auto;
+	}
+	.feature .t1{
+		width:148px;
+		height:432px;
+		left:5%;
+		top:5%;
+	}
+	.feature .t2{
+		width:63px;
+		height:376px;
+		right:10%;
+	}
+	.feature .t3{
+		width:59px;
+		height:454px;
+		left:9%;
+		top:20px;
+	}
+
+	/* 配图相关设置 */
+	
+	/* 通过设置容器大小实现图片的自适应缩放 */
+	.feature .pic{
+		width:530px;
+		height:530px; 
+		/* 重新设置了宽高属性之后要重新设置background-size属性？？ */
+		background-size:contain;
+	}
+	.feature .p1{
+		right:3%;
+	}
+	.feature .p2{
+		left:3%;
+	}
+	.feature .p3{
+		right:3%;
+		top:20px;
+	}
+	
+	.feature .article{
+		font-size:1em;
+	}
+
+	/* usage页面 */
+	.usage{
+		background:#7f48f4!important;  /* 重新设置背景颜色 */
+	}
+	.usage,.usage .fp-tableCell{
+		height:800px!important;
+	}
+	.usage .step .article{
+		font-size:0.9em;
+		padding-top:1em;
+		margin-left:0.8em;
+	}
+	.usage .title{
+		left:12%;
+	}
+	.usage table{
+		right:3%;
+	}
+	
+	/* contact页面 */
+	.contact{
+		height:800px!important;
+	}
+
+}
+
+/* cellphone 竖屏 width：320~414 */
+@media screen and (min-width:319px) and (max-width:415px) and (orientation:portrait){
+	.fp-table,.top .fp-tableCell{
+		/*display:block!important;*/
+	}
+	/* top页面 */
+	.top{
+		background:url(../img/Top_cellphoneSize.png) no-repeat!important;
+		/* 重新设置了背景图片之后，需要重新设置background-size? */
+		background-size:cover!important;
+	}
+	.top .img{
+		width:272px;
+		height:540px;
+		background:url(../img/Top_CellphoneSize-V.png) no-repeat!important;
+		background-size:contain!important;
+	}
+	
+	.feature {
+		height:425px!important;
+	}
+	.feature .pic{
+		width:300px;
+		height:300px;
+		background-size:contain!important;
+	}
+	.feature .title img{
+		/* 图片大小跟随父容器大小自适应 */
+		height:100%;
+		width:auto;
+	}
+	.feature .t1{
+		width:105px;
+		height:307px;
+		left:4%;
+	}
+	
+	.feature .t2{
+		width:45px;
+		height:268px;
+		right:4%;
+		top:1%;
+	}
+	.feature .t3{
+		width:42px;
+		height:323px;
+		left:4%;
+		top:3%;
+	}
+	.feature .p1{
+		right:5px;
+	}
+	.feature .p2{
+		left:5px;
+	}
+	.feature .p3{
+		right:5px;
+	}
+	.feature .article{
+		font-size:0.8em;
+		top:80%!important;
+	}
+
+	/* usage页面 */
+	.usage{
+		background:#7f48f4!important;
+		font-size:0.8em;
+	}
+	
+	/* 隐藏竖版的图片Title，改去显示横版的文字版title */
+	.usage .title{
+		display:none;
+	}
+	.usage .title_cellphone{
+		display:block!important;
+		/* 注意：之前的设置是行内样式设置，因此要加上important进行设置 */
+		position:absolute;
+		width:100%;
+		text-align: center;
+		top:8%;
+		font-size:3em;
+		font-weight:bolder;
+		
+	}
+	/* 考虑到手机宽度较窄，不去显示icon内容（img宽度设为0）*/
+	.usage table{
+		/* 水平居中 */
+		left:0;
+		right:0;
+		margin:0 auto;
+		height:400px;
+		width:92%!important;
+		top:22%;
+	}
+	.usage table .article{
+		text-align: center;
+	}
+	.usage table tr img{
+		height:0;
+		width:0;
+	}
+	.usage table{
+		border-spacing:0;
+	}
+	
+	/* contact页面 */
+	.contact{
+		/*height:640px!important;*/
+	}
+	.contact .fp-tableCell{
+		/*height:823px!important;*/
+	}
+	
+	.contact .fp-scrollable{
+		overflow:hidden!important;
+		/*height:823px!important;*/
+	}
+	.contact .fp-scroller{
+		/*height:900px!important;*/
+		overflow:hidden!important;
+	}
+	.contact #company-info,.contact #contact-item{
+		width:100%;
+		height:435px!important;
+		float:none!important;
+	}
+	
+	.contact #company-info h1,.contact #contact-item h1{
+		margin-top:0;
+		height:135px;
+		line-height:135px;
+	}
+	.contact #contact-item{
+		z-index:999;
+	}
+
+	.contact .footer,.contact #items,.contact #info-box{
+		font-size:0.7em;
+	}
+	.contact .footer{
+		/*position:sticky;*/
+		position:static;
+		z-index:1000;
+		height:30px;
+	}
+	.contact .footer span{
+		line-height:30px;
+	}
+}
+
+/* cellphone 横屏 width：568~823 */
+@media screen and (min-width:567px) and (max-width:824px) and (orientation:landscape){
+	.top .img{
+		width:542px;
+		height:266px;
+		background:url(../img/Top_CellphoneSize-H.png) no-repeat!important;
+		background-size:contain!important;
+	}
+	.feature {
+		height:320px!important;
+	}
+	.feature .pic{
+		width:290px;
+		height:290px;
+		background-size:contain!important;
+	}
+		.feature .title img{
+		/* 图片大小跟随父容器大小自适应 */
+		height:100%;
+		width:auto;
+	}
+	.feature .t1{
+		width:99px;
+		height:290px;
+		left:21%;
+	}
+	
+	.feature .t2{
+		width:42px;
+		height:250px;
+		right:21%;
+		top:1%;
+	}
+	.feature .t3{
+		width:40px;
+		height:304px;
+		left:21%;
+		top:3%;
+	}
+	.feature .article{
+		font-size:0.6em;
+		top:85%!important;
+	}
+	.feature .a1{
+		left:15%;
+	}
+	.feature .a3{
+		left:13%;
+	}
+	.feature .p1{
+		right:22%;
+	}
+	.feature .p2{
+		left:29%;
+	}
+	.feature .p3{
+		right:25%;
+	}
+	.usage .title{
+		width:32px;
+		height:270px;
+	}
+	
+	.usage table {
+		left:30%;
+		top:1%;
+		font-size:0.7em;
+		height:220px!important;
+	}
+
+	.usage table tr img{
+		height:0;
+		width:0;
+	}
+	
+	
+	.contact #company-info,.contact #contact-item{
+		height:100%!important;
+	}
+
+	.contact .footer,.contact #items,.contact #info-box{
+		font-size:0.7em;
+	}
+	.contact h1{
+		margin-top:9%!important;
+	    font-size:1.1em;
+	}
+	#contact-item #items{
+		height:200px;
+		width:240px!important;
+		top:31%;
+	}
+	#contact-item #items .item{
+		height:30px;
+		width:240px!important;
+		text-align:center;
+		line-height:30px;
+		/*background:#fb6a5e;*/
+		background:#ff7561; 
+		margin-bottom:20px;
+	}
+	#company-info #info-box{
+		width:170px;
+		top:22%;
+	}
+	.contact .footer{
+		height:30px;
+	}
+
+	.contact .footer span{
+		line-height:30px;
+	}
+
+}
